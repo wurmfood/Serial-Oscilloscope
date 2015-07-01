@@ -29,15 +29,15 @@ void setup() {
 }
 
 void loop() {
-    static int numChans = 1;
+    static int numChans = 3;
 
     // Received character sets number of active channels
-    while(Serial.available() > 0) {
+    /*while(Serial.available() > 0) {
         char c = Serial.read();
         if(c >= '1' && c <= '6') {
             numChans = c - '0';
         }
-    }
+    }*/
 
     // Print ADC results for active channels
     PrintInt(analogRead(A0));
